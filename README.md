@@ -3,9 +3,9 @@ Insale-Responsive-Magento-Template
 Insale - Responsive Magento Template<br/>
 Insale is a clean, easy to customize Magento template with responsive & mobile ready design.<br/>
 
+Demo: http://insale.magazento.com/<br/>
+Website: http://www.magazento.com/english/templates/insale-responsive-magento-template<br/>
 Wiki: http://www.magazento.com/wiki/index.php?title=Insale_-_Responsive_Magento_Themplate<br/>
-Demo: http://insale.magazento.com/
-Website: http://www.magazento.com/english/templates/insale-responsive-magento-template
 
 Key Features
 ========================
