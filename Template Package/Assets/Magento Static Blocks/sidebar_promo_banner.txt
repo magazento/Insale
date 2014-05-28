@@ -1,0 +1,1 @@
+<p><a href="#"><img class="sidebar-banner" src="{{media url="wysiwyg/sidebar_promo_banner.png"}}" alt="" /></a></p>

@@ -1,0 +1,80 @@
+<?php
+/**
+ * Magento
+ *
+ * @category    design
+ * @package     insale_default
+ * @copyright   Ivan Proskuryakov http://www.magazento.com <volgodark@gmail.com>
+ */
+/* @var $this Mage_Reports_Block_Product_Viewed */
+?>
+
+<?php
+    $_helper = $this->helper('catalog/output');
+?>
+<?php if ($_products = $this->getRecentlyViewedProducts()): ?>
+    <div class="recently-viewed">
+        <div class="container_16">
+            <div class="grid_16">
+
+                <section class="block-list block-viewed">
+                    <header>
+                        <h2 class="grid_4 alpha"><?php echo $this->__('Recently Viewed') ?></h2>
+                        <?php if ($_products->getSize() >7): ?>                            
+                            <nav class="navigation-buttons">
+                                <button type="button" class="button scroll-left"><span><span><?php echo $this->__('Scroll Left') ?></span></span></button>
+                                <button type="button" class="button scroll-right"><span><span><?php echo $this->__('Scroll Right') ?></span></span></button>   
+                            </nav>       
+                        <?php endif; ?>                            
+                    </header>
+                    <div class="block-content iosSlider-recently">
+                        <ul class="slider-items" id="recently-viewed-items">
+                        <?php foreach ($_products as $_product): ?>
+                            <li class="item">
+                                <div class="product-item">
+                                    <?php 
+                                        $_gallery = Mage::getModel('catalog/product')->load($_product->getId())->getMediaGalleryImages();
+                                        $_image = null;
+                                        if (count($_gallery)) {
+                                            foreach ($_gallery as $item)
+                                            {
+                                                $_image = $item->getFile();
+                                            }     
+                                        }
+                                    ?>                                    
+                                    <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>" class="product-image">
+                                        <img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(145,180); ?>" 
+                                             alt="<?php echo $this->htmlEscape($_product->getName()) ?>" />
+
+                                        <img class="hover-image" 
+                                             src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image',$_image)->resize(145,180); ?>" 
+                                             alt="<?php echo $this->htmlEscape($_product->getName()) ?>" />
+
+                                    </a>     
+                                    <a href="#" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>');" class="btn-cart btn-cart-icon">#</a>
+
+                                        
+                                    <h2 class="item fn product-name">
+                                        <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $_product->getName() ?>"><?php echo $this->htmlEscape($_product->getName()) ?></a>
+                                    </h2>
+                                    <div class="product-name-divider">
+                                        <div class="divider-line"></div>
+                                        <div class="divider-diamond"></div>
+                                    </div>    
+
+                                    <?php if($_product->getRatingSummary()): ?>
+                                    <?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>
+                                    <?php endif; ?>
+                                    <?php echo $this->getPriceHtml($_product, true) ?>
+                                </div>                                
+                            </li>
+
+                        <?php endforeach; ?>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>    
+        </div>    
+    </div>    
+<?php endif; ?>

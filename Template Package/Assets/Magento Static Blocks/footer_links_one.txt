@@ -1,0 +1,6 @@
+<h2><span>Contact Us</span></h2>
+<ul>
+<li>1234 South Manhattan Place, LA</li>
+<li>+123 (999) 1234</li>
+<li>service@magazento.com</li>
+</ul>

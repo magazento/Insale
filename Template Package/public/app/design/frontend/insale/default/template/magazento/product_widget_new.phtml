@@ -1,0 +1,80 @@
+<?php
+/**
+ * 
+ * @category  design
+ * @package   insale_default
+ * @author    Ivan Proskuryakov http://www.magazento.com <volgodark@gmail.com>
+ * @copyright Copyright (C)2013 Magazento
+ */
+?>
+<?php $collection = $this->getProductsCollection(); ?>
+<?php if($collection->count()): ?>
+<section class="widget-new-products">
+    
+    <header class="grid_4 alpha">
+        <div class="new-products-block">
+        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId($this->getStaticBlock())->toHtml(); ?>
+
+        <?php if (count($collection) >3): ?>                            
+            <nav class="navigation-buttons">
+                <button type="button" class="button scroll-left"><span><span><?php echo $this->__('Scroll Left') ?></span></span></button>
+                <button type="button" class="button scroll-right"><span><span><?php echo $this->__('Scroll Right') ?></span></span></button>   
+            </nav>    
+        <?php endif; ?>   
+        </div>    
+    </header>
+    
+    <div class="grid_12 omega">
+        <div class="block-content iosSlider-newproducts">
+            <ul class="slider-items">
+                <?php foreach ($collection as $_item): ?>
+                    <li class="item">
+                        <div class="product-item">
+                            
+                            <?php 
+                                $_gallery = Mage::getModel('catalog/product')->load($_item->getId())->getMediaGalleryImages();
+                                $_image = null;
+                                if (count($_gallery)) {
+                                    foreach ($_gallery as $item)
+                                    {
+                                        $_image = $item->getFile();
+                                    }     
+                                }
+                            ?>                                    
+                            <a href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_item->getName()) ?>" class="product-image">
+                                <img src="<?php echo $this->helper('catalog/image')->init($_item, 'small_image')->resize(260,320); ?>" 
+                                     alt="<?php echo $this->htmlEscape($_item->getName()) ?>" />
+                                
+                                <img class="hover-image" 
+                                     src="<?php echo $this->helper('catalog/image')->init($_item, 'small_image',$_image)->resize(260,320); ?>" 
+                                     alt="<?php echo $this->htmlEscape($_item->getName()) ?>" />
+                            
+                            </a>
+                            
+                            <a href="#" onclick="setLocation('<?php echo $this->getAddToCartUrl($_item) ?>');" class="btn-cart btn-cart-icon">#</a>
+                            
+                            <div class="promo-container">
+                                <?php 
+                                    $_promo = $this->helper('insale/data')->getPromoLabels($_item);
+                                    echo $_promo['sale'];                        
+                                    echo $_promo['new'];                        
+                                ?>   
+                            </div>                                
+                            
+                            <div class="product-details">
+                                <h3 class="product-name"><a href="<?php echo $_item->getProductUrl() ?>"><?php echo $this->htmlEscape($_item->getName()) ?></a></h3>
+                                <div class="product-name-divider">
+                                    <div class="divider-line"></div>
+                                    <div class="divider-diamond"></div>
+                                </div>   
+                                <?php echo $this->getPriceHtml($_item, true) ?>
+                            </div>
+                        </div>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    </div>
+</section>
+<?php endif ?>
+

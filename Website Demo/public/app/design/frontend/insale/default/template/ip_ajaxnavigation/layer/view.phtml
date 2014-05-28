@@ -1,0 +1,32 @@
+<?php
+/**
+ * 
+ * @category  design
+ * @package   insale_default
+ * @author    Ivan Proskuryakov http://www.magazento.com <volgodark@gmail.com>
+ * @copyright Copyright (C)2013 Magazento
+ */
+?>
+<?php if($this->canShowBlock()): ?>
+<section class="block block-layered-nav">
+    <div class="block-title">
+        <div class="sidebar-triangle"> </div><span><?php echo $this->__('Shop By') ?></span>
+    </div>
+    <div class="block-content">
+        <?php echo $this->getStateHtml() ?>
+        <?php if($this->canShowOptions()): ?>
+            <p class="block-subtitle"><?php echo $this->__('Shopping Options') ?></p>
+            <dl id="narrow-by-list">
+                <?php $_filters = $this->getFilters() ?>
+                <?php foreach ($_filters as $_filter): ?>
+                    <?php if($_filter->getItemsCount()): ?>
+                        <dt class="block-options-heading" ><?php echo $this->__($_filter->getName()) ?></dt>
+                        <dd><?php echo $_filter->getHtml() ?></dd>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </dl>
+            <script type="text/javascript">decorateDataList('narrow-by-list')</script>
+        <?php endif; ?>
+    </div>
+</section>
+<?php endif; ?>

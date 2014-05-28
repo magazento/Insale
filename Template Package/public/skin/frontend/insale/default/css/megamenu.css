@@ -1,0 +1,286 @@
+.nav-container #menu {
+    width:950px;
+    list-style: none;
+    margin: 0 auto;
+    display: block;
+    min-height: 260px;
+    background: #fff;
+    color: #666;
+
+    -webkit-box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.15);
+    padding-bottom: 35px;
+}
+
+
+.nav-container #main .subsection_tabs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    clear: both;
+    height: 36px;
+    background: #fff;
+    margin-top: 7px;
+}
+
+.nav-container #main .subsection_tabs li {
+    text-align:center;
+    position: relative;
+}
+
+.nav-container #main .subsection_tabs li.right {
+	float: left;
+	text-align: center;
+	border-left: solid 2px white;
+	border-right: 0;
+}
+.nav-container #main .subsection_tabs li.last {
+	border-right: 0;
+}
+
+.nav-container #main .subsection_tabs li.tab a {
+    display: block;
+    height: 18px;
+    padding: 9px 15px 10px 15px;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.nav-container #main ul.subsection_tabs li a.active {
+    text-decoration: underline;
+}
+
+.nav-container #main a {
+    text-decoration: none;
+    color: rgb(48, 48, 48);
+}
+
+.menu-content{
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #fff;
+}
+
+.nav-container #menu li.drop,.nav-container #menu li.home-link {
+	border: 1px solid transparent;
+}
+
+
+
+.nav-container #menu li {
+    float:left;
+    display:block;
+    text-align:center;
+    position:relative;
+    border:none;
+    background: transparent;
+    margin: 1px 0;
+    clear:both;
+    
+}
+.nav-container #menu li .category-item-icon {
+    background: url("../images/list-bullet.png") 2px 50% no-repeat;
+    padding-left: 14px;
+}
+
+.nav-container #menu ul ul a {
+    line-height: 11px;
+    /*color: #666;*/
+}
+.nav-container #menu ul {
+	margin-left:5px;
+}
+
+
+
+.nav-container .nav-container #main{
+    position: relative;
+    z-index: 8;
+    margin-top: 9px;
+}
+.nav-container .nav-container #menu .allcategories:hover {
+}
+
+.nav-container #menu li a {
+    font-weight: normal;
+    color: #444;
+    display:block;
+    outline:0;
+    text-decoration:none;
+    -moz-transition: background-color 700ms ease;
+    -webkit-transition: background-color 700ms ease;
+    -o-transition: background-color 700ms ease;
+    transition: background-color 700ms ease;
+}
+
+.nav-container #menu li a:hover {
+    color: #000;
+}
+
+.nav-container .nav-container #menu .first:hover .align_left  {
+    left:0px;
+    top:auto;
+}
+.nav-container #menu li:hover .align_left  {
+    left:-1px;
+    top:auto;
+}
+.nav-container #menu li:hover .align_right {
+    left:auto;
+    right:2px;
+    top:auto;
+}
+
+.nav-container .nav-container #menu .allcategories:hover .align_right {
+    left:auto;
+    right:0px;
+    top:auto;
+}
+
+.nav-container #menu .menu_right {
+    float:right;
+    margin-right:0px;
+}
+.nav-container #menu li.allcategories .align_right {
+	margin-right: -1px;
+}
+
+
+
+.nav-container #menu p, .nav-container #menu h2, .nav-container #menu h3, .nav-container #menu ul li {
+    line-height: 21px;
+    font-size: 14px;
+    text-align: left;
+    color: #666;
+}
+.nav-container #menu h3 {
+    margin:7px 0 8px 0;
+    padding-bottom:1px;
+    border-bottom:1px solid #888888;
+}
+.nav-container #menu p {
+    line-height:18px;
+    margin:0 0 10px 0;
+}
+
+.nav-container #menu li:hover div a {
+    font-size:12px;
+    color: #000000;
+    text-decoration: none;
+}
+.nav-container #menu li:hover div a:hover {
+    color: #A72D2C;
+}
+
+.nav-container #menu li ul {
+    list-style:none;
+    padding:0;
+    margin:0 0 2px 0;
+}
+.nav-container #menu li ul li a {
+    font-weight: normal;
+}
+.nav-container #menu ul li ul {
+    margin: 3px 0 0 13px;
+}
+
+
+.nav-container #menu li ul li {
+    background:0;
+    font-size:12px;
+    line-height: 16px;
+    position:relative;
+    padding:0;
+    margin:0;
+    float:none;
+    text-align:left;
+    /*width:130px;*/
+    display: list-item;
+    width: 100%;
+}
+
+.menuitem{
+    z-index: 99;
+    position: absolute;
+    left: -140px;
+    top: 37px;
+}
+
+
+.menu-footer{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    clear: both;
+    padding: 2px 0;
+    width: 100%;
+    left:0;
+    z-index: 99999;
+    background: #3c3c3c;
+}
+
+.menu-footer .footer-title {
+    margin-left: 10px;
+    padding: 5px 0px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.nav-container #main .menu-footer a {
+        color : #fff;
+}
+
+.nav-container #main .menu-footer a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 17px;
+    text-decoration: underline;
+}
+.nav-container #main .menu-footer a:hover {
+    text-decoration: underline;
+}    
+
+
+.nav-container #main .tl {
+	top: 0;
+	left: 0;
+}
+
+.nav-container #main .tr {
+	top: 0;
+	right: 0;
+	background-position: 100% 0%;
+}
+.nav-container #main .corner {
+	position: absolute;
+	width: 4px;
+	height: 4px;
+	z-index: 50;
+}
+
+.nav-container #menu table {
+    border-collapse: collapse;
+}
+.nav-container #menu table td, table th {
+    padding: 5px 10px 0 10px;
+    width: 23%;
+}
+.nav-container #menu table td img, table th img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-container #menu .menu-content-header {
+    font-size: 20px;
+    margin: 10px 0 3px 0;
+    width: 95%;
+    clear: both;
+    display: block;
+    float: left;
+    font-weight: normal;
+}

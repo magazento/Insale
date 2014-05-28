@@ -1,0 +1,63 @@
+<?php
+/**
+ * 
+ * @category  design
+ * @package   insale_default
+ * @author    Ivan Proskuryakov http://www.magazento.com <volgodark@gmail.com>
+ * @copyright Copyright (C)2013 Magazento
+ */
+?>
+<div class="footer-banners container_16">
+    <div class="grid_16">
+        <?php echo $this->getChildHtml('footer_categoy_banners') ?>
+    </div>
+</div>                
+<?php echo $this->getChildHtml('product_viewed') ?>
+<footer>
+    <div class="footer-top"> 
+        <div class="footer-container container_16"> 
+                <div class="grid_12">
+                    <div class="footer-block">
+                        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_container_left')->toHtml() ?>
+                        <?php echo $this->getChildHtml('newsletter') ?>
+                        <div class="payment-icons">
+                            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_container_left_payment')->toHtml() ?>
+                        </div>
+                    </div>                   
+                </div>                   
+                <div class="grid_4">
+                    <div class="footer-block footer-divider">
+                        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_container_right')->toHtml() ?>
+                    </div>                    
+                </div>                   
+        </div>
+    </div>
+    <div class="footer-bottom"> 
+        <div class="footer-container container_16"> 
+            <div class="grid_4">
+                <div class="footer-block">                
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_links_one')->toHtml() ?>
+                </div>                   
+            </div>                   
+            <div class="grid_4">
+                <div class="footer-block">                      
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_links_two')->toHtml() ?>               
+                </div>                   
+            </div>                   
+            <div class="grid_4">
+                <div class="footer-block">                      
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_links_three')->toHtml() ?>                     
+                </div>                   
+            </div>                   
+            <div class="grid_4">
+                <div class="footer-block">                      
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_links_four')->toHtml() ?>                 
+                </div>                   
+            </div>                   
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="footer-ribbon">
+        <address><?php echo $this->getCopyright() ?></address>   
+    </div>
+</footer>

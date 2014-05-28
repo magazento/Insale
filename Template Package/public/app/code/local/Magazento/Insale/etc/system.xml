@@ -1,0 +1,177 @@
+<config>
+    <tabs>
+        <magazento translate="label">
+            <label>Magazento.com</label>
+            <sort_order>250</sort_order>
+        </magazento>
+    </tabs>    
+    <sections>
+        <insale translate="label comment" module="insale">
+            <tab>magazento</tab>
+            <label>Insale Template</label>
+            <frontend_type>text</frontend_type>
+            <sort_order>0</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label comment" module="insale">
+                    <label>Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+
+                    <fields>
+                        <ajaxcart_enabled translate="label comment" module="insale">
+                            <label>AjaxCart Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </ajaxcart_enabled>
+                        <logo translate="label comment">
+                            <label>Logo</label>
+                            <comment>Allowed file types: jpeg, gif, png.</comment>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">magazento_insale</upload_dir>
+                            <base_url type="media" scope_info="1">magazento_insale</base_url>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </logo>
+                        <logo_small translate="label comment">
+                            <label>Logo Small</label>
+                            <comment>Allowed file types: jpeg, gif, png.</comment>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">magazento_insale</upload_dir>
+                            <base_url type="media" scope_info="1">magazento_insale</base_url>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </logo_small>
+                        <logo_mini translate="label comment">
+                            <label>Logo Mini</label>
+                            <comment>Allowed file types: jpeg, gif, png.</comment>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">magazento_insale</upload_dir>
+                            <base_url type="media" scope_info="1">magazento_insale</base_url>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </logo_mini>
+
+<!--                        <image_login_page translate="label comment">
+                            <label>Image Login Page</label>
+                            <comment>Allowed file types: jpeg, gif, png.</comment>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">magazento_insale</upload_dir>
+                            <base_url type="media" scope_info="1">magazento_insale</base_url>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </image_login_page>
+                        <image_checkout_page translate="label comment">
+                            <label>Image Checkout Page</label>
+                            <comment>Allowed file types: jpeg, gif, png.</comment>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">magazento_insale</upload_dir>
+                            <base_url type="media" scope_info="1">magazento_insale</base_url>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </image_checkout_page> -->
+
+                        <googlefonts translate="label">
+                            <label>Google Font Main</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>insale/googlefonts</source_model>
+                            <frontend_model>insale/adminhtml_system_config_form_field_font</frontend_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment> <![CDATA[ Read more on <a target="_blank" href="http://www.google.com/fonts/">http://www.google.com/fonts/</a> ]]>
+                           </comment>
+                        </googlefonts>
+
+
+                        <googlefonts2 translate="label">
+                            <label>Google Font Second</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>insale/googlefonts</source_model>
+                            <frontend_model>insale/adminhtml_system_config_form_field_font</frontend_model>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment> <![CDATA[ Read more on <a target="_blank" href="http://www.google.com/fonts/">http://www.google.com/fonts/</a> ]]>
+                           </comment>
+                        </googlefonts2>
+
+                        <color1 translate="label comment" module="insale">
+                            <label>Main color</label>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>insale/adminhtml_system_config_form_field_color</frontend_model>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </color1>
+                        <color2 translate="label comment" module="insale">
+                            <label>Second color</label>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>insale/adminhtml_system_config_form_field_color</frontend_model>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </color2>
+                        <color3 translate="label comment" module="insale">
+                            <label>Third color</label>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>insale/adminhtml_system_config_form_field_color</frontend_model>
+                            <sort_order>130</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </color3>
+
+                        <megamenu translate="label comment" module="insale">
+                            <label>Megamenu</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>230</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </megamenu>
+                    </fields>
+
+                </general>
+                <info translate="label">
+                    <label>About Template</label>
+                    <frontend_type>text</frontend_type>
+                    <frontend_model>insale/info</frontend_model>
+                    <sort_order>500</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </info>
+            </groups>
+        </insale>
+    </sections>
+</config>

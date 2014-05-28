@@ -1,0 +1,97 @@
+<?php
+/**
+ * 
+ * @category  design
+ * @package   insale_default
+ * @author    Ivan Proskuryakov http://www.magazento.com <volgodark@gmail.com>
+ * @copyright Copyright (C)2013 Magazento
+ */
+?>
+<div class="header-wrapper">
+    <header class="website-header default">
+        <div class="website-header-scroll ">
+            <div class="header-container container_16"> 
+                    <div class="logo-container grid_3 omega">
+                        <div class="logo-container">
+                            <a href="<?php echo $this->getUrl('') ?>" 
+                               title="<?php echo $this->getLogoAlt() ?>" class="logo">
+                                <img class="logotype logo-big"   src="<?php echo Mage::getBaseUrl('media') .'/magazento_insale/'. Mage::getStoreConfig('insale/general/logo');?>" alt="<?php echo $this->getLogoAlt() ?>" />
+                                <img class="logotype logo-small" src="<?php echo Mage::getBaseUrl('media') .'/magazento_insale/'. Mage::getStoreConfig('insale/general/logo_small');?>" alt="<?php echo $this->getLogoAlt() ?>" />
+                                <img class="logo-fixed" src="<?php echo Mage::getBaseUrl('media') .'/magazento_insale/'. Mage::getStoreConfig('insale/general/logo_mini');?>" alt="<?php echo $this->getLogoAlt() ?>" />
+                            </a>
+                        </div>    
+                    </div>    
+                    <div class="navigation grid_13">
+
+                    <div class="header-top">
+                        <div class="header-locale grid_4 omega">
+                            <?php echo $this->getChildHtml('currency') ?>   
+                            <?php echo $this->getChildHtml('store_language') ?>   
+                        </div>
+
+                        <div class="header-welcome-msg grid_5">
+                           <p class="welcome-msg"><?php echo $this->getWelcome() ?> <?php echo $this->getAdditionalHtml() ?></p>
+                        </div>
+
+                        <div class="header-toplinks grid_4 omega">
+                            <?php echo $this->getChildHtml('topLinks') ?>
+                        </div>
+                    </div>
+
+                    <div class="header-bottom">
+                        <nav class="grid_7">
+                            <?php echo $this->getChildHtml('topMenu') ?>
+                        </nav>        
+                        <div class="nav-extra grid_6 alpha omega">    
+
+                            <div class="cart dropdown-container">
+                                <a href="<?php echo $this->getUrl('checkout/cart')?>">
+                                    <span class="cart-icon"></span>
+                                    <span class="cart-counter"><?php echo $this->__('In Cart') ?> (<?php echo Mage::getModel('checkout/cart')->getItemsQty(); ?>) </span>
+                                </a>
+                                <div class="dropdown-content">
+                                    <?php echo $this->getChildHtml('cart_header') ?>
+                                </div>     
+                            </div>     
+
+                            <div class="wishlist dropdown-container">
+                                <a class="wishlist-icon" href="<?php echo $this->helper('wishlist')->getListUrl();?>">
+                                    <?php echo $this->__('Wishlist') ?>
+                                </a>
+                                <?php
+                                $wishlist = $this->getChildHtml('wishlist');
+                                if (!$wishlist) {
+                                    $wishlist = '<p class="empty">'.$this->__('You have no items in your wishlist.')."</p>";
+                                }
+                                ?>
+                                <div class="dropdown-content">
+                                    <div class="wishlist-content">
+                                        <div class="content-triangle">
+                                        </div>                                     
+                                        <?php echo $wishlist; ?>  
+                                    </div>
+                                </div>
+
+                            </div>     
+
+
+                            <div class="topsearch">
+                                <?php echo $this->getChildHtml('topSearch') ?>
+                            </div>                     
+                        </div>        
+                    </div>            
+                </div>
+            </div>
+
+    </header>
+</div>    
+<?php
+    $page = Mage::app()->getFrontController()->getRequest()->getRouteName();
+    if($page =='cms'){
+        $cmsSingletonIdentifier = Mage::getSingleton('cms/page')->getIdentifier();
+        $homeIdentifier = Mage::app()->getStore()->getConfig('web/default/cms_home_page');
+        if($cmsSingletonIdentifier === $homeIdentifier){
+             echo $this->getChildHtml('headerslider');
+        }
+    }
+?>    

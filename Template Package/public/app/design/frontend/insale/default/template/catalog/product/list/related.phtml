@@ -1,0 +1,72 @@
+<?php
+/**
+ * 
+ * @category  design
+ * @package   insale_default
+ * @author    Ivan Proskuryakov http://www.magazento.com <volgodark@gmail.com>
+ * @copyright Copyright (C)2013 Magazento
+ */
+?>
+
+<?php if($this->getItems()->getSize()): ?>
+<section class="box-related">
+    <header>
+        <h2 class="related-title"><?php echo $this->__('We recommend') ?></h2>
+        <?php if ($this->getItems()->getSize() >1): ?>                            
+            <nav class="navigation-buttons">
+                <img src="<?php echo $this->getSkinUrl('images/pager_arrow_left.png') ?>"  class="scroll-right i-pager" alt="<?php echo $this->__('Previos') ?>"/>
+                <img src="<?php echo $this->getSkinUrl('images/pager_arrow_right.png') ?>" class="scroll-left i-pager" alt="<?php echo $this->__('Next') ?>"/>                
+            </nav>       
+        <?php endif; ?>                            
+    </header>
+    <div class="related-content">
+        <div class="iosSlider-related">
+            <ul id="block-related" class="slider-items">
+                <?php foreach($this->getItems() as $_item): ?>
+                    <li class="item">
+                        <div class="product-item">
+                            
+                            <?php 
+                                $_gallery = Mage::getModel('catalog/product')->load($_item->getId())->getMediaGalleryImages();
+                                $_image = null;
+                                if (count($_gallery)) {
+                                    foreach ($_gallery as $item)
+                                    {
+                                        $_image = $item->getFile();
+                                    }     
+                                }
+                            ?>                                    
+                            <a href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_item->getName()) ?>" class="product-image">
+                                <img class="photo fn" 
+                                     src="<?php echo $this->helper('catalog/image')->init($_item, 'small_image')->resize(230,280); ?>" 
+                                     alt="<?php echo $this->htmlEscape($this->getImageLabel($_item, 'small_image')) ?>" 
+                                     />
+                                
+                                <img class="hover-image" 
+                                     src="<?php echo $this->helper('catalog/image')->init($_item, 'small_image',$_image)->resize(230,280); ?>" 
+                                     alt="<?php echo $this->htmlEscape($this->getImageLabel($_item, 'small_image')) ?>" 
+                                     />
+                            
+                            </a>
+                            <a href="#" onclick="setLocation('<?php echo $this->getAddToCartUrl($_item) ?>');" class="btn-cart btn-cart-icon">#</a>
+
+                            <h2 class="product-name">
+                                <a href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $_item->getName() ?>"><?php echo $this->htmlEscape($_item->getName()) ?></a>
+                            </h2>
+                            <div class="product-name-divider">
+                                <div class="divider-line"></div>
+                                <div class="divider-diamond"></div>
+                            </div>    
+
+                            <?php if($_item->getRatingSummary()): ?>
+                            <?php echo $this->getReviewsSummaryHtml($_item, 'short') ?>
+                            <?php endif; ?>
+                            <?php echo $this->getPriceHtml($_item, true) ?>
+                        </div>     
+                    </li>
+                <?php endforeach ?>
+            </ul>
+        </div>
+    </div>
+</section>
+<?php endif ?>

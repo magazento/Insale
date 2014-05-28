@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+
+    <modules>
+        <Ip_Ajaxnavigation>
+            <version>1.0.5</version>
+        </Ip_Ajaxnavigation>
+    </modules>
+
+    <global>
+        <models>
+            <catalog>
+                <rewrite>
+                    <layer>Ip_Ajaxnavigation_Model_Layer</layer>
+                </rewrite>
+            </catalog>
+            <ajaxnavigation>
+                <class>Ip_Ajaxnavigation_Model</class>
+                <resourceModel>ajaxnavigation_mysql4</resourceModel>
+            </ajaxnavigation>
+            <ajaxnavigation_mysql4>
+                <class>Ip_Ajaxnavigation_Model_Mysql4</class>
+            </ajaxnavigation_mysql4>
+        </models>
+        <blocks>
+            <ajaxnavigation>
+                <class>Ip_Ajaxnavigation_Block</class>
+            </ajaxnavigation>
+        </blocks>
+        <helpers>
+            <ajaxnavigation>
+                <class>Ip_Ajaxnavigation_Helper</class>
+            </ajaxnavigation>
+        </helpers>
+        <resources>
+            <ip_ajaxnavigation_setup>
+                <setup>
+                    <module>Ip_Ajaxnavigation</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </ip_ajaxnavigation_setup>
+            <ajaxnavigation_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </ajaxnavigation_write>
+            <ajaxnavigation_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </ajaxnavigation_read>
+        </resources>
+
+    </global>
+
+
+    <frontend>
+        <layout>
+            <updates>
+                <ajaxnavigation>
+                    <file>ip_ajaxnavigation.xml</file>
+                </ajaxnavigation>
+            </updates>
+        </layout>
+        <routers>
+            <ajaxnavigation>
+                <use>standard</use>
+                <args>
+                    <module>Ip_Ajaxnavigation</module>
+                    <frontName>ajaxnavigation</frontName>
+                </args>
+            </ajaxnavigation>
+            <catalog>
+                <args>
+                    <modules>
+                        <Ip_Ajaxnavigation before="Mage_Catalog">Ip_Ajaxnavigation</Ip_Ajaxnavigation>
+                    </modules>
+                </args>
+            </catalog>
+            <catalogsearch>
+                <args>
+                    <modules>
+                        <Ip_Ajaxnavigation before="Mage_CatalogSearch">Ip_Ajaxnavigation</Ip_Ajaxnavigation>
+                    </modules>
+                </args>
+            </catalogsearch>
+        </routers>
+        <translate>
+            <modules>
+                <Ip_Ajaxnavigation>
+                    <files>
+                        <default>Ip_Ajaxnavigation.csv</default>
+                    </files>
+                </Ip_Ajaxnavigation>
+            </modules>
+        </translate>
+    </frontend>
+
+<!--    <default>
+        <ajaxnavigation>
+            <general>
+                <jquery>1</jquery>
+            </general>
+        </ajaxnavigation>
+    </default>-->
+
+</config>

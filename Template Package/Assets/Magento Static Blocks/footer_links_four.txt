@@ -1,0 +1,7 @@
+<h2><span>My Account</span></h2>
+<ul>
+<li><a href="{{store direct_url="customer/account/"}}">My Account</a></li>
+<li><a href="{{store direct_url="#"}}">Order History</a></li>
+<li><a href="{{store direct_url="#"}}">Wish List</a></li>
+<li><a href="{{store direct_url="#"}}">Newsletter</a></li>
+</ul>

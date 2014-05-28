@@ -1,0 +1,18 @@
+<div class="promo-banner">
+<div class="promo-icon-container">
+<div class="promo-icon-one">&nbsp;</div>
+</div>
+<div class="promo-text">PLACE FOR BANNER</div>
+</div>
+<div class="promo-banner">
+<div class="promo-icon-container">
+<div class="promo-icon-two">&nbsp;</div>
+</div>
+<div class="promo-text">PLACE FOR BANNER</div>
+</div>
+<div class="promo-banner">
+<div class="promo-icon-container">
+<div class="promo-icon-three">&nbsp;</div>
+</div>
+<div class="promo-text">PLACE FOR BANNER</div>
+</div>

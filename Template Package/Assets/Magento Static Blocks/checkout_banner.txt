@@ -1,0 +1,1 @@
+<p><img src="{{media url="wysiwyg/checkout-banner.png"}}" alt="" /></p>

@@ -1,0 +1,280 @@
+<?xml version="1.0"?>
+<root>
+    <cms>
+        <pages>
+            <item>
+                <title>Home Page</title>
+                <identifier>home</identifier>
+                <content><![CDATA[
+                        <div class="homepage-banner-left grid_6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget nunc laoreet posuere. Suspendisse adipiscing placerat augue, dictum blandit justo laoreet a. Pellentesque quam vitae urna fermentum elementum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget nunc laoreet posuere. Suspendisse adipiscing placerat augue, dictum blandit justo laoreet a. Pellentesque quam vitae urna fermentum elementum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget nunc laoreet posuere. Suspendisse adipiscing placerat augue, dictum blandit justo laoreet a. Pellentesque quam vitae urna fermentum elementum.</div>
+<div class="homepage-banner-center grid_4 alpha"><img style="margin-top: 4px; margin-left: 13px;" src="{{media url="wysiwyg/homepage-banner-center.png"}}" alt="" /></div>
+<div class="homepage-banner-right grid_6 omega">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget nunc laoreet posuere. Suspendisse adipiscing placerat augue, dictum blandit justo laoreet a. Pellentesque quam vitae urna fermentum elementum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget nunc laoreet posuere. Suspendisse adipiscing placerat augue, dictum blandit justo laoreet a. Pellentesque quam vitae urna fermentum elementum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget nunc laoreet posuere. Suspendisse adipiscing placerat augue, dictum blandit justo laoreet a. Pellentesque quam vitae urna fermentum elementum.</div>
+<div class="promo-divider"><span>Enjoy free shipping on orders of $195</span></div>
+<p>{{widget type="insale/newproducts" template="magazento/product_widget_new.phtml" static_block="new_products" products_amount="10"}}</p>
+<div class="promo-divider"><span>Discount Program Get 20% Off the Price</span></div>
+<p>{{widget type="insale/saleproducts" template="magazento/product_widget_sale.phtml" static_block="sale_products" products_amount="10"}}</p>
+<div class="promo-divider"><span>Over 1000 positive reviews were posted</span></div>
+<p>{{widget type="insale/reviews" template="magazento/review_widget.phtml" min_rating="5" reviews_amount="10"}}</p>]]></content>
+                <is_active>1</is_active>
+                <sort_order>0</sort_order>
+                <stores>
+                    <item>0</item>
+                </stores>
+                <root_template>one_column</root_template>
+            </item>
+        </pages>
+        <blocks>
+            <item>
+                <title>Footer Links One</title>
+                <identifier>footer_links_one</identifier>
+                <content><![CDATA[<h2><span>Contact Us</span></h2>
+<ul>
+<li>1234 South Manhattan Place, LA</li>
+<li>+123 (999) 1234</li>
+<li>service@magazento.com</li>
+</ul>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Footer Links Two</title>
+                <identifier>footer_links_two</identifier>
+                <content><![CDATA[<h2><span>Information</span></h2>
+<ul>
+<li><a href="{{store direct_url="about-magento-demo-store"}}">About Us</a></li>
+<li class="last privacy"><a href="{{store direct_url="privacy-policy-cookie-restriction-mode"}}">Privacy Policy</a></li>
+<li><a href="{{store direct_url="customer-service"}}">Terms &amp; Conditions</a></li>
+<li><a href="{{store direct_url="#"}}">Secure payment</a></li>
+</ul>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Footer Links Three</title>
+                <identifier>footer_links_three</identifier>
+                <content><![CDATA[<h2><span>Customer Service</span></h2>
+<ul>
+<li><a href="{{store direct_url="contacts"}}">Contact Us</a></li>
+<li><a href="{{store direct_url="#"}}">Return</a></li>
+<li><a href="{{store direct_url="#"}}">FAQ</a></li>
+<li><a href="{{store direct_url="#"}}">Site Map</a></li>
+</ul>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Footer Links Four</title>
+                <identifier>footer_links_four</identifier>
+                <content><![CDATA[<h2><span>My Account</span></h2>
+<ul>
+<li><a href="{{store direct_url="customer/account/"}}">My Account</a></li>
+<li><a href="{{store direct_url="#"}}">Order History</a></li>
+<li><a href="{{store direct_url="#"}}">Wish List</a></li>
+<li><a href="{{store direct_url="#"}}">Newsletter</a></li>
+</ul>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Footer Container Left</title>
+                <identifier>footer_container_left</identifier>
+                <content><![CDATA[<h2>About our company</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit... This about text can be edited from theme admin panel!</p>
+]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Footer Container Right</title>
+                <identifier>footer_container_right</identifier>
+                <content><![CDATA[<h2>SOCIAL NETWORKS</h2>
+<ul>
+<li><strong>Phone</strong>: (123)234-5678, (123)234-5678</li>
+<li><strong>E-mail</strong>: service@magazento.com</li>
+</ul>
+<p class="social-links"><a class="footer-social-facebook" href="https://www.facebook.com/magazento">#</a> <a class="footer-social-twitter" href="https://www.facebook.com/magazento">#</a> <a class="footer-social-skype" href="#">#</a> <a class="footer-social-rss" href="#">#</a> <a class="footer-social-pinterest" href="#">#</a></p>
+<div class="clear">&nbsp;</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore&nbsp;</p>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Footer Container Left Payment</title>
+                <identifier>footer_container_left_payment</identifier>
+                <content><![CDATA[<p><img src="{{media url="wysiwyg/payment-icons.png"}}" alt="" /></p>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Footer Category Banners</title>
+                <identifier>footer_categoy_banners</identifier>
+                <content><![CDATA[<div class="promo-banner">
+<div class="promo-icon-container">
+<div class="promo-icon-one">&nbsp;</div>
+</div>
+<div class="promo-text">PLACE FOR BANNER</div>
+</div>
+<div class="promo-banner">
+<div class="promo-icon-container">
+<div class="promo-icon-two">&nbsp;</div>
+</div>
+<div class="promo-text">PLACE FOR BANNER</div>
+</div>
+<div class="promo-banner">
+<div class="promo-icon-container">
+<div class="promo-icon-three">&nbsp;</div>
+</div>
+<div class="promo-text">PLACE FOR BANNER</div>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Sidebar Promo Banner</title>
+                <identifier>sidebar_promo_banner</identifier>
+                <content><![CDATA[<p><a href="#"><img class="sidebar-banner" src="{{media url="wysiwyg/sidebar_promo_banner.png"}}" alt="" /></a></p>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Static Block Text 1</title>
+                <identifier>sidebar_info1</identifier>
+                <content><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget nunc laoreet posuere.urna Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget nunc laoreet posuere. urna Suspendisse adipiscing placerat augue, dictum blandit justo laoreet a. Pellentesque quam vitae urna fermentum e</p>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Static Block Text 2</title>
+                <identifier>sidebar_info2</identifier>
+                <content><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget nunc laoreet posuere.urna Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget nunc laoreet posuere. urna Suspendisse adipiscing placerat augue, dictum blandit justo laoreet a. Pellentesque quam vitae urna fermentum e</p>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Product Tabs Bottom</title>
+                <identifier>product_tabs_bottom</identifier>
+                <content><![CDATA[
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget nunc laoreet posuere.urna &nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget nunc laoreet posuere. urna Suspendisse adipiscing placerat augue, dictum blandit justo laoreet a. Pellentesque quam vitae urna fermentum elementum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget et nunc laoreet posuere. Suspendisse adipiscing placerat augue, dictum blandit justo laoreet a. et nisi et eget ellentesque quam vitae urna fermentum elementum. &nbsp;Donec et nisi eget nunc laoreet posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget nunc laoreet posuere.urna &nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget nunc laoreet posuere. urna Suspendisse adipiscing placerat augue, dictum blandit justo laoreet a.&nbsp;</p>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Product Tabs Sidebar</title>
+                <identifier>product_tabs_sidebar</identifier>
+                <content><![CDATA[
+<p><img src="{{media url="wysiwyg/sidebar-banner-1.png"}}" alt="" /></p>
+<p><img src="{{media url="wysiwyg/sidebar-banner-2.png"}}" alt="" /></p>
+                        <]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>STATIC BLOCK FOR CART PAGE</title>
+                <identifier>checkout_promo</identifier>
+                <content><![CDATA[
+<p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget nunc laoreet posuere.urna Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget Suspendisse adipiscing plac erat augue, dictum blandit justo laoreet a. Pellentesque quam vitae urna fermentum elementum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget et nunc laoreet posuere. Suspendisse adipiscing placerat augue, dictum blandit justo laoreet a. et nisi et eget ellentesque quam vitae&nbsp;<span>eget</span>&nbsp;</p>
+                        <]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Checkout Banner</title>
+                <identifier>checkout_banner</identifier>
+                <content><![CDATA[
+<p><img src="{{media url="wysiwyg/checkout-banner.png"}}" alt="" /></p>
+                        <]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>New Products</title>
+                <identifier>new_products</identifier>
+                <content><![CDATA[
+<h2>NEW<span>arrivals</span></h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget nunc laoreet posuere. Suspendisse adipiscing placerat augue, dictum blandit justo laoreet a. Pellentesque quam vitae urna fermentum elementum.&nbsp;</p>
+<p><a class="view-more-link" href="#">VIEW Collection</a></p>
+                        <]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Sidebar Facebook</title>
+                <identifier>sidebar_facebook</identifier>
+                <content><![CDATA[
+<div class="fb-like-box" data-href="http://www.facebook.com/magazento" data-width="290" data-height="400" data-show-faces="true" data-stream="false" data-show-border="false" data-header="false"></div>
+                        <]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Sale Products</title>
+                <identifier>sale_products</identifier>
+                <content><![CDATA[
+<h2>BEST<span>sellers</span></h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget nunc laoreet posuere. Suspendisse adipiscing placerat augue, dictum blandit justo laoreet a. Pellentesque quam vitae urna fermentum elementum.&nbsp;</p>
+<p><a class="view-more-link" href="#">VIEW Collection</a></p>
+                        <]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Static Block No Products (Category page)</title>
+                <identifier>no_products_category</identifier>
+                <content><![CDATA[
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget nunc laoreet posuere.urna &nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget nunc laoreet posuere. urna Suspendisse adipiscing placerat augue, dictum blandit justo laoreet a. Pellentesque quam vitae urna fermentum elementum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget et nunc laoreet posuere. Suspendisse adipiscing placerat augue, dictum blandit justo laoreet a. et nisi et eget ellentesque quam vitae urna fermentum elementum. &nbsp;Donec et nisi eget nunc laoreet posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget nunc laoreet posuere.urna &nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget nunc laoreet posuere. urna Suspendisse adipiscing placerat augue, dictum blandit justo laoreet a.&nbsp;</p>
+                        <]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Static Block No Products (Cart page)</title>
+                <identifier>no_products_cart</identifier>
+                <content><![CDATA[
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget nunc laoreet posuere.urna &nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget nunc laoreet posuere. urna Suspendisse adipiscing placerat augue, dictum blandit justo laoreet a. Pellentesque quam vitae urna fermentum elementum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget et nunc laoreet posuere. Suspendisse adipiscing placerat augue, dictum blandit justo laoreet a. et nisi et eget ellentesque quam vitae urna fermentum elementum. &nbsp;Donec et nisi eget nunc laoreet posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget nunc laoreet posuere.urna &nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget nunc laoreet posuere. urna Suspendisse adipiscing placerat augue, dictum blandit justo laoreet a.&nbsp;</p>
+                        <]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+        </blocks>
+    </cms>
+</root>

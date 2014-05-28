@@ -1,0 +1,7 @@
+<h2><span>Information</span></h2>
+<ul>
+<li><a href="{{store direct_url="about-magento-demo-store"}}">About Us</a></li>
+<li class="last privacy"><a href="{{store direct_url="privacy-policy-cookie-restriction-mode"}}">Privacy Policy</a></li>
+<li><a href="{{store direct_url="customer-service"}}">Terms &amp; Conditions</a></li>
+<li><a href="{{store direct_url="#"}}">Secure payment</a></li>
+</ul>

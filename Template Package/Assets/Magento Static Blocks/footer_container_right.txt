@@ -1,0 +1,8 @@
+<h2>SOCIAL NETWORKS</h2>
+<ul>
+<li><strong>Phone</strong>: (123)234-5678, (123)234-5678</li>
+<li><strong>E-mail</strong>: service@magazento.com</li>
+</ul>
+<p class="social-links"><a class="footer-social-facebook" href="https://www.facebook.com/magazento">#</a> <a class="footer-social-twitter" href="https://www.facebook.com/magazento">#</a> <a class="footer-social-skype" href="#">#</a> <a class="footer-social-rss" href="#">#</a> <a class="footer-social-pinterest" href="#">#</a></p>
+<div class="clear">&nbsp;</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore&nbsp;</p>

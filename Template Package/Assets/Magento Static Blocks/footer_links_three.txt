@@ -1,0 +1,7 @@
+<h2><span>Customer Service</span></h2>
+<ul>
+<li><a href="{{store direct_url="contacts"}}">Contact Us</a></li>
+<li><a href="{{store direct_url="#"}}">Return</a></li>
+<li><a href="{{store direct_url="#"}}">FAQ</a></li>
+<li><a href="{{store direct_url="#"}}">Site Map</a></li>
+</ul>

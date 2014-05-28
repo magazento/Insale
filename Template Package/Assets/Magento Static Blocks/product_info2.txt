@@ -1,0 +1,2 @@
+<div class="product-info-rewards">&nbsp;</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi eget nunc laoreet posuere.urna Lorem ipsum dolor sit amet, consectetur adipiscing</p>
